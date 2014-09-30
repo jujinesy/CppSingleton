@@ -5,11 +5,13 @@
 
 B::B()
 {
+	std::cout << "B 持失切" << std::endl;
 }
 
 
 B::~B()
 {
+	std::cout << "B 社瑚切" << std::endl;
 }
 
 
@@ -20,13 +22,11 @@ void B::test1()
 
 void B::test2()
 {
-	run_flag = true;
-	while (run_flag)
+	while (m_bInitialized)
 	{
 		std::cout << "Thread test2" << std::endl;
 		Sleep(1000);
-	}
-		
+	}		
 }
 
 void B::th()

@@ -18,6 +18,7 @@ public:
 
 	static void destroyInstance() {
 		if (m_pInstance) {
+			m_bInitialized = false;
 			delete m_pInstance;
 			m_pInstance = NULL;
 		}

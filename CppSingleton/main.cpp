@@ -9,12 +9,14 @@ int main()
 {
 	std::cout << "메인 시작" << std::endl;
 	A::Instance()->test1();
+	A::destroyInstance();
+
 	B::Instance()->test1();
 	B::Instance()->th();
 	Sleep(5000);
 	std::cout << "쓰레드 종료" << std::endl;
-	B::Instance()->run_flag = false;
-	//Sleep(3000);
+	B::destroyInstance();
+
 	getchar();
 	return 0;
 }

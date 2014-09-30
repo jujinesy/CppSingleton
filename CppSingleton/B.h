@@ -10,7 +10,6 @@ public:
 	void test1();
 	void test2();
 	void th();
-	bool run_flag;
 	std::thread::native_handle_type HW;
 };
 
